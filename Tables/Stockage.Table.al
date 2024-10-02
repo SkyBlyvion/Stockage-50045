@@ -13,13 +13,13 @@ table 50301 Stockage
         field(2; "cbarticulo"; Code[25])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Code ';
+            Caption = 'Gendcode ';
             Description = 'STOCKAGE LN 30/09/24 REV24';
         }
         field(3; "cbubicacion"; Code[30])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Code ';
+            Caption = 'Emplacement ';
             Description = 'STOCKAGE LN 30/09/24 REV24';
         }
         field(4; "stock"; Integer)
@@ -59,27 +59,6 @@ table 50301 Stockage
         // Add changes to field groups here
     }
 
-    var
-        Art: Record Item;
 
-    trigger OnInsert()
-    begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
-    end;
 
 }
