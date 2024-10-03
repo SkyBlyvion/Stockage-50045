@@ -1,56 +1,61 @@
-table 50301 Stockage
+table 50351 Stockage
 {
     DataClassification = ToBeClassified;
 
     fields
     {
-        field(1; "No."; Code[20])
+        field(13; "No."; Code[20])
         {
             DataClassification = ToBeClassified;
-            Caption = 'No.';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
+            Caption = 'No. article';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(2; "cbarticulo"; Code[25])
+        field(14; "cbarticulo"; Code[25]) // 
         {
             DataClassification = ToBeClassified;
-            Caption = 'Gendcode ';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
+            Caption = 'Gendcode';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(3; "cbubicacion"; Code[30])
+        field(15; "cbubicacion"; Code[30])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Emplacement ';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
+            Caption = 'Emplacement';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(4; "stock"; Integer)
+        field(6; "Picking"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            BlankNumbers = DontBlank;
+            Caption = 'Picking';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
+        }
+        field(16; "Stock"; Integer)
         {
             DataClassification = ToBeClassified;
             BlankNumbers = DontBlank;
             Caption = 'Stock';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(5; "bultos"; Decimal)
+        field(2; "Code"; Code[20])
         {
             DataClassification = ToBeClassified;
-            BlankNumbers = DontBlank;
-            Caption = 'Bultos';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
+            Caption = 'Code';
+            Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(6; "principal"; Boolean)
-        {
-            DataClassification = ToBeClassified;
-            BlankNumbers = DontBlank;
-            Caption = 'Principal';
-            Description = 'STOCKAGE LN 30/09/24 REV24';
-        }
+
     }
 
 
     keys
     {
-        key(PK; "cbarticulo", "cbubicacion")
+        key(PK; "No.", "cbubicacion")
         {
             Clustered = true;
+        }
+
+        key(SecondaryKey; "Picking", "cbubicacion")
+        {
+            Clustered = false;
         }
     }
 

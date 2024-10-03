@@ -1,7 +1,6 @@
-permissionset 50302 "StockagePerms"
+permissionset 50352 "StockagePerms"
 {
     Assignable = true;
     Permissions =
-        tabledata "Emplacement" = RIMD,
         tabledata "Stockage" = RIMD;
 }

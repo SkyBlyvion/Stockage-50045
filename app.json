@@ -2,7 +2,7 @@
   "id": "d267b5eb-e84c-47f8-83d9-6dea6141c9c7",
   "name": "Stockage",
   "publisher": "Lopez Nicolas - REVIMPORT",
-  "version": "1.0.0.1",
+  "version": "1.0.0.6",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -10,13 +10,20 @@
   "help": "",
   "url": "",
   "logo": "",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "12eacc5c-c397-78fe-ad49-c030e45fcd3e",
+      "name": "ItemsExtensionsTables",
+      "publisher": "Lopez Nicolas",
+      "version": "1.0.4.5"
+    }
+  ],
   "screenshots": [],
   "platform": "1.0.0.0",
   "application": "24.0.0.0",
   "idRanges": [
     {
-      "from": 50301,
+      "from": 50350,
       "to": 50400
     }
   ],
