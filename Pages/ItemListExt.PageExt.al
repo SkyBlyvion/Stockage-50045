@@ -14,6 +14,7 @@ pageextension 50354 ItemListExt extends "Item Card"
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 ApplicationArea = All;
+                Image = NonStockItem;
 
                 trigger OnAction()
                 var
