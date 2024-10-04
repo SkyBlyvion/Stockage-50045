@@ -22,13 +22,6 @@ table 50351 Stockage
             Caption = 'Emplacement';
             Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(6; "Picking"; Boolean)
-        {
-            DataClassification = ToBeClassified;
-            BlankNumbers = DontBlank;
-            Caption = 'Picking';
-            Description = 'STOCKAGE LN 03/10/24 REV24';
-        }
         field(16; "Stock"; Integer)
         {
             DataClassification = ToBeClassified;
@@ -36,10 +29,18 @@ table 50351 Stockage
             Caption = 'Stock';
             Description = 'STOCKAGE LN 03/10/24 REV24';
         }
-        field(2; "Code"; Code[20])
+        field(2; "bultos"; Decimal)
         {
             DataClassification = ToBeClassified;
-            Caption = 'Code';
+            Caption = 'bultos';
+            BlankNumbers = DontBlank;
+            Description = 'STOCKAGE LN 03/10/24 REV24';
+        }
+        field(6; "principal"; Boolean)
+        {
+            DataClassification = ToBeClassified;
+            BlankNumbers = DontBlank;
+            Caption = 'Principal';
             Description = 'STOCKAGE LN 03/10/24 REV24';
         }
 
@@ -53,10 +54,12 @@ table 50351 Stockage
             Clustered = true;
         }
 
-        key(SecondaryKey; "Picking", "cbubicacion")
+        key(SecondaryKey; "principal", "cbarticulo")
         {
-            Clustered = false;
+            Enabled = true;
         }
+
+
     }
 
     fieldgroups

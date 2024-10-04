@@ -34,7 +34,7 @@ pageextension 50354 ItemListExt extends "Item Card"
     begin
         // Apply filter to find records in the Stockage table where Picking is TRUE and Item No. matches the current item
         StockageRec.SetRange("No.", Rec."No.");
-        StockageRec.SetRange(Picking, true);
+        StockageRec.SetRange(principal, true);
 
         if StockageRec.FindFirst() then
             // Fetch the "cbubicacion" (Emplacement) and update the "Shelf No." in the Item table

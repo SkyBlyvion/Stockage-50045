@@ -26,17 +26,17 @@ page 50353 "Stockage"
                     ApplicationArea = All;
                     ToolTip = 'Indicates the location where the item is stored.';
                 }
-                field("Picking"; Rec."Picking")
+                field("Stock"; Rec."Stock")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Indicates whether picking true or false.';
                 }
-                field("Stock"; Rec."Stock")
+                field("bultos"; Rec."bultos")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows the current stock quantity available in this storage location.';
                 }
-                field("Code"; Rec."Code")
+                field("Principal"; Rec."principal")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows the article code related to this stockage.';
